@@ -1,23 +1,14 @@
-# Compiled class file
-*.class
-
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+fun main(args: Array<String>) {
+    var hours = readLine()!!.toInt()
+    var total: Double = 0.0
+    var days: Int = 0
+    days = hours/24
+    if (hours<=5){
+    total = hours * 1.0
+    } else if (hours <= 24){
+    total = 5+(hours-5)*0.5
+    } else {
+    total = (15*days)+(hours-(24*days))*0.5
+    }
+    println(total)
+}
